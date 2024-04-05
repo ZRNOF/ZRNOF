@@ -3,31 +3,35 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+	--fg-color: rgb(5, 5, 5);
+	--bg-color: whitesmoke;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+	:root {
+		--fg-color: whitesmoke;
+		--bg-color: rgb(5, 5, 5);
+	}
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	user-select: none;
+}
+
+body,
+main {
+	color: var(--fg-color);
+	background-color: var(--bg-color);
+	scrollbar-width: thin;
+	scrollbar-color: grey var(--bg-color);
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+	.content-wrap {
+		@apply py-16 h-dvh overflow-y-scroll box-border;
+	}
+
+	.navbar-link {
+		@apply text-[var(--fg-color)] transition-all duration-300 ease-out hover:tracking-[.25em];
+	}
 }
