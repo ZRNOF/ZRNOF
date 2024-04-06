@@ -19,7 +19,7 @@ const Header = () => {
 			width="100%"
 			height="7rem"
 			top="0"
-			className="bg-gradient-to-b from-[var(--bg-color)] from-50% via-transparent"
+			className="z-50 bg-gradient-to-b from-[var(--bg-color)] from-50% via-transparent"
 		>
 			<Container px="7">
 				<Flex justify="between" align="center" className="h-16">

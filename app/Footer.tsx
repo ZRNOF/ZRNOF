@@ -4,7 +4,7 @@ const Footer = () => {
 	return (
 		<Flex
 			position="fixed"
-			className="bottom-0 w-full h-28 bg-gradient-to-t from-[var(--bg-color)] from-50% via-transparent"
+			className="z-50 bottom-0 w-full h-28 bg-gradient-to-t from-[var(--bg-color)] from-50% via-transparent"
 			align="end"
 		>
 			<Container>
