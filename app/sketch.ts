@@ -12,7 +12,7 @@ const Welcome = (p: p5Types, parentId: string) => {
 	const simplexNoiseSeed = p.random()
 	const noise4D = createNoise4D(() => simplexNoiseSeed)
 	const speed = 0.01
-	const radius = 180
+	const radius = 150
 	const amount = 200
 	const weiRange = 100
 	const circleSize = 10
@@ -80,8 +80,8 @@ const Welcome = (p: p5Types, parentId: string) => {
 		p.pop()
 	}
 
-	p.keyPressed = () => {
-		p.key === " " && (isShowCircle = !isShowCircle)
+	p.mousePressed = () => {
+		isShowCircle = !isShowCircle
 	}
 }
 
