@@ -1,4 +1,4 @@
-import { Container, Flex, Theme } from "@radix-ui/themes"
+import { Flex, Theme } from "@radix-ui/themes"
 import "@radix-ui/themes/styles.css"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
@@ -28,10 +28,8 @@ export default function RootLayout({
 				<Theme>
 					<Header />
 					<main className="content-wrap">
-						<Flex height="100%">
-							<Container px="7" height="100%">
-								{children}
-							</Container>
+						<Flex width="100dvw" height="100%">
+							{children}
 						</Flex>
 					</main>
 					<Footer />

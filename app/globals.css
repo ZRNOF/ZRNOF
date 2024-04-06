@@ -28,7 +28,7 @@ main {
 
 @layer utilities {
 	.content-wrap {
-		@apply py-16 h-dvh overflow-y-scroll box-border;
+		@apply py-16 h-dvh box-border;
 	}
 
 	.t-a-3-ease-out {

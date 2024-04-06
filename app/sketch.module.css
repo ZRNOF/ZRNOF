@@ -1,0 +1,23 @@
+.welcome {
+	position: relative;
+	top: 50%;
+	left: 33.333%;
+	transform: translate(-50%, -50%) rotate(-90deg);
+	opacity: 0;
+	animation: Canvas-FadeIn-Shift-Rotate 6s forwards;
+}
+
+@keyframes Canvas-FadeIn-Shift-Rotate {
+	33% {
+		top: 50%;
+		left: 33.333%;
+		opacity: 1;
+		transform: translate(-50%, -50%) rotate(-90deg);
+	}
+	100% {
+		top: 50%;
+		left: 100%;
+		opacity: 1;
+		transform: translate(-100%, -50%);
+	}
+}
