@@ -31,7 +31,19 @@ main {
 		@apply py-16 h-dvh overflow-y-scroll box-border;
 	}
 
+	.t-a-3-ease-out {
+		@apply transition-all duration-300 ease-out;
+	}
+
+	.tracking {
+		@apply tracking-wide hover:tracking-[.25em];
+	}
+
 	.navbar-link {
-		@apply text-[var(--fg-color)] transition-all duration-300 ease-out hover:tracking-[.25em];
+		@apply text-[var(--fg-color)] t-a-3-ease-out hover:tracking-[.25em];
+	}
+
+	.hover-invert {
+		@apply hover:bg-[var(--fg-color)] hover:text-[var(--bg-color)];
 	}
 }
