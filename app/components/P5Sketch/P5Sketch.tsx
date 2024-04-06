@@ -13,7 +13,7 @@ interface P5SketchProps {
 
 const P5Sketch = ({ sketch, id, className, p5flex = false }: P5SketchProps) => {
 	const p5Ref = useRef<HTMLDivElement>(null)
-	const sketchInitialized = useRef(false)
+	const sketchInstance = useRef<p5Types | null>(null)
 	const [isMounted, setIsMounted] = useState<boolean>(false)
 
 	useEffect(() => {
@@ -24,17 +24,20 @@ const P5Sketch = ({ sketch, id, className, p5flex = false }: P5SketchProps) => {
 		if (!isMounted) return
 		const init = async () => {
 			try {
-				sketchInitialized.current = true
 				const p5 = (await import("p5")).default
 				mountFlex(p5)
-				p5flex
+				const instance = p5flex
 					? new p5((p) => sketch(p, id))
 					: new p5((p) => sketch(p, id), p5Ref.current!)
+				sketchInstance.current = instance
 			} catch (error) {
 				console.log(error)
 			}
 		}
 		init()
+		return () => {
+			sketchInstance.current && sketchInstance.current.remove()
+		}
 	}, [isMounted, sketch, p5flex, id])
 
 	return <div {...{ id, className }} ref={p5flex ? undefined : p5Ref}></div>
