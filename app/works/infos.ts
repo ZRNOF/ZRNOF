@@ -1,3 +1,8 @@
+import Welcome from "../sketch"
+import UnifiedRupture from "./sketches/UnifiedRupture"
+import Travel from "./sketches/Travel"
+import SHUTTLE from "./sketches/SHUTTLE"
+
 const infos = [
 	{
 		id: "UnifiedRupture",
@@ -5,6 +10,7 @@ const infos = [
 		desc: "description",
 		href: "https://openprocessing.org/sketch/1898796",
 		preview: "/UnifiedRupture.png",
+		sketch: UnifiedRupture,
 	},
 	{
 		id: "Travel",
@@ -12,6 +18,7 @@ const infos = [
 		desc: "description",
 		href: "https://openprocessing.org/sketch/1826376",
 		preview: "/Travel.png",
+		sketch: Travel,
 	},
 	{
 		id: "DraculaAndTheUndead",
@@ -19,6 +26,7 @@ const infos = [
 		desc: "description",
 		href: "https://openprocessing.org/sketch/1891135",
 		preview: "/DraculaAndTheUndead.png",
+		sketch: Welcome,
 	},
 	{
 		id: "SHUTTLE",
@@ -26,6 +34,7 @@ const infos = [
 		desc: "description",
 		href: "https://openprocessing.org/sketch/1828512",
 		preview: "/SHUTTLE.png",
+		sketch: SHUTTLE,
 	},
 	{
 		id: "Naraka",
@@ -33,6 +42,7 @@ const infos = [
 		desc: "description",
 		href: "https://openprocessing.org/sketch/1914052",
 		preview: "/Naraka.png",
+		sketch: Welcome,
 	},
 ]
 

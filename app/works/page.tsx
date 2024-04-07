@@ -4,6 +4,7 @@ import { Box, Flex, Grid, Heading, Text } from "@radix-ui/themes"
 import Image from "next/image"
 import Link from "next/link"
 import infos from "./infos"
+import P5Sketch from "../components/P5Sketch"
 
 const WorksPage = () => {
 	return (
@@ -14,10 +15,11 @@ const WorksPage = () => {
 			width="100dvw"
 			height="100dvh"
 			justify="center"
+			overflowX="hidden"
 			overflowY="scroll"
 		>
 			<Box width="100%" height="100%" maxWidth="1136px">
-				{infos.map((info) => {
+				{infos.map((info, index) => {
 					return (
 						<Grid
 							key={info.id}
@@ -53,12 +55,17 @@ const WorksPage = () => {
 								gridColumnStart={{ initial: "1", sm: "6" }}
 								gridColumnEnd="11"
 								gridRow="1"
-								id={info.id}
 								width="100%"
 								maxHeight={{ initial: "", xs: "80%" }}
 								className="relative aspect-square overflow-hidden outline outline-8 outline-[#ccc]"
 							>
-								<Preview src={info.preview} />
+								<Preview src={info.preview} index={index} />
+								<P5Sketch
+									className="w-full h-full"
+									sketch={info.sketch}
+									id={info.id}
+									p5flex
+								/>
 								<ViewCodeButton href={info.href} />
 							</Box>
 						</Grid>
@@ -69,14 +76,14 @@ const WorksPage = () => {
 	)
 }
 
-const Preview = ({ src }: { src: string }) => {
+const Preview = ({ src, index }: { src: string; index: number }) => {
 	return (
 		<Image
 			src={src}
-			loading="lazy"
 			alt=""
 			width={1024}
 			height={1024}
+			priority={index === 0}
 			className="absolute w-full h-full object-cover transition-opacity duration-500 hover:opacity-0"
 		/>
 	)
