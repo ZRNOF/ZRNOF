@@ -8,9 +8,9 @@ interface NavbarProps {
 
 export const Navbar = ({ links }: NavbarProps) => {
 	return (
-		<ul className="hidden sm:flex justify-between">
+		<ul className="hidden sm:flex">
 			{links.map((link) => (
-				<li key={link.label} className="w-36 text-center">
+				<li key={link.label} className="w-36 text-end">
 					<Link href={link.href} className="navbar-link">
 						{link.label}
 					</Link>
