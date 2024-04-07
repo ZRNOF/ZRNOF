@@ -11,7 +11,7 @@ export const Navbar = ({ links }: NavbarProps) => {
 		<ul className="hidden sm:flex">
 			{links.map((link) => (
 				<li key={link.label} className="w-36 text-end">
-					<Link href={link.href} className="navbar-link">
+					<Link href={link.href} className="navbar-link" scroll={false}>
 						{link.label}
 					</Link>
 				</li>
@@ -25,7 +25,7 @@ export const CollapsedNavbar = ({ links }: NavbarProps) => {
 		<ul className="absolute top-14 left-0 w-full sm:hidden flex flex-col justify-start h-dvh bg-gradient-to-b from-[var(--bg-color)] from-50% via-transparent">
 			{links.map((link) => (
 				<li key={link.label} className="py-8 text-center">
-					<Link href={link.href} className="navbar-link">
+					<Link href={link.href} className="navbar-link" scroll={false}>
 						{link.label}
 					</Link>
 				</li>
