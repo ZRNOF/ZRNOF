@@ -1,8 +1,7 @@
 "use client"
 
+import { Box, Flex, Grid, Heading, Text } from "@radix-ui/themes"
 import Image from "next/image"
-import "./test.css"
-import { Flex, Box, Heading, Grid, Text } from "@radix-ui/themes"
 import Link from "next/link"
 import infos from "./infos"
 
@@ -36,7 +35,7 @@ const WorksPage = () => {
 								gridRow="1"
 								p="2"
 								pr={{ initial: "0", sm: "7" }}
-								className="z-10 bg-[#000000E7] md:bg-transparent"
+								className="z-10 bg-[#000000E7] md:bg-transparent text-white md:text-[var(--fg-color)] pointer-events-none"
 							>
 								<Heading as="h2" align="center">
 									{info.title}
