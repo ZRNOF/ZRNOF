@@ -38,15 +38,15 @@ const ContactPage = () => {
 					align="center"
 					direction="column"
 					py="7rem"
-					gap="4"
+					gap="3"
 				>
-					<Flex pt="5" maxWidth="500px" justify="center" align="center">
+					<Flex maxWidth="500px" justify="center" align="center">
 						{icons.map((contactIcon, index) => (
 							<Box
 								key={index}
 								m="2"
 								p="2"
-								className="t-a-3-ease-out hover:scale-150"
+								className="t-a-3-ease-out hover:scale-125"
 							>
 								<Link href={contactIcon.link} target="_blank">
 									<contactIcon.icon
