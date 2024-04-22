@@ -37,7 +37,7 @@ main {
 	}
 
 	.tracking {
-		@apply tracking-wide hover:tracking-[.25em];
+		@apply tracking-[.125em] hover:tracking-[.2em];
 	}
 
 	.navbar-link {
