@@ -48,7 +48,9 @@ const Welcome = (p: p5Types, parentId: string) => {
 		p.background(bgColor)
 		p.stroke(fgColor)
 		const noiseWeight = p.map(p.mouseX, 0, p.width, -weiRange, weiRange, true)
-		const angle = p.map(p.mouseY, 0, p.height, -p.PI, p.PI, true)
+
+		const angle =
+			t <= 3 ? p.PI : p.map(p.mouseY, 0, p.height, -p.PI, p.PI, true)
 		p.translate(p.width / 2, p.height / 2)
 		p.rotate(angle)
 		drawNobo(radius, noiseWeight, amount, circleSize, t)
