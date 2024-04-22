@@ -43,13 +43,7 @@ const WorksPage = () => {
 									{info.title}
 								</Heading>
 								<hr className="my-2 hidden md:block" />
-								<Text className="hidden md:inline">
-									Lorem ipsum dolor sit amet consectetur adipisicing elit.
-									Adipisci ea necessitatibus quod eaque, laudantium, odit
-									consequuntur illo quia corporis reprehenderit saepe explicabo
-									assumenda libero eveniet commodi, natus perspiciatis facere
-									maiores?
-								</Text>
+								<Text className="hidden md:inline">{info.desc}</Text>
 							</Box>
 							<Box
 								gridColumnStart={{ initial: "1", sm: "6" }}
