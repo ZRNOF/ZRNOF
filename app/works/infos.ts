@@ -2,6 +2,7 @@ import Welcome from "../sketch"
 import UnifiedRupture from "./sketches/UnifiedRupture"
 import Travel from "./sketches/Travel"
 import SHUTTLE from "./sketches/SHUTTLE"
+import DraculaAndTheUndead from "./sketches/Dracula and the Undead"
 
 const infos = [
 	{
@@ -26,7 +27,7 @@ const infos = [
 		desc: "description",
 		href: "https://openprocessing.org/sketch/1891135",
 		preview: "/DraculaAndTheUndead.png",
-		sketch: Welcome,
+		sketch: DraculaAndTheUndead,
 	},
 	{
 		id: "SHUTTLE",
