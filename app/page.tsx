@@ -80,19 +80,22 @@ const Canvas = styled(P5Sketch)`
 `
 
 const intro1 = `
-	Hi there! My name is Zaron Chen and I come from Taiwan, a beautiful
-	island surrounded by the sea. I am a Creative Coder and Generative
-	Artist, and have been exploring the world of Creative Coding and
-	Generative Art since 2022. My main tools for creating art are p5.js,
-	processing, glsl, and touchdesigner.
+	Hi there! My name is Zaron Chen, and I'm from Taiwan, a stunning
+	island embraced by the sea. I am a Creative Coder | Generative
+	Artist | Front-end Developer, delving into the realms of Creative
+	Coding and Generative Art since 2022. My primary tools for
+	crafting art include p5.js, GLSL, TouchDesigner, and some custom
+	libraries I've developed during my spare moments.
 `
 
 const intro2 = `
-	Recently, I have been working on developing tools and contribute to
-	the Creative Coding and Generative Art community. I am excited to
-	continue exploring and pushing the boundaries of what is possible
-	with these technologies. Thanks for taking the time to get to know
-	me and my work!
+	Recently, I have been working on developing tools and contributing
+	to the Creative Coding and Generative Art community. I also have
+	some little experience in both front-end and back-end development,
+	such as building this personal website using React and Next.js. If
+	you'd like to add some fun to your website or if you're interested
+	in collaboration, feel free to contact me! Thank you for taking
+	the time to get to know me!
 `
 
 export default function Home() {
