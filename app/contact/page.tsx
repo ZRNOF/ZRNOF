@@ -1,4 +1,4 @@
-import { Box, Container, Flex } from "@radix-ui/themes"
+import { Box, Flex } from "@radix-ui/themes"
 import Link from "next/link"
 import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
@@ -20,62 +20,74 @@ const ContactPage = () => {
 	]
 
 	return (
-		<Container px="7" height="100%">
-			<Flex
-				width="100%"
-				height="100%"
-				justify="center"
-				align="center"
-				direction="column"
-				gap="4"
-				mt="-5"
-			>
-				<Flex maxWidth="500px" justify="center" align="center">
-					{icons.map((contactIcon, index) => (
-						<Box
-							key={index}
-							m="2"
-							p="2"
-							className="t-a-3-ease-out hover:scale-150"
-						>
-							<Link href={contactIcon.link} target="_blank">
-								<contactIcon.icon
-									size={32}
-									className="text-[var(--text-color)]"
-								/>
-							</Link>
-						</Box>
-					))}
-				</Flex>
+		<Flex
+			position="fixed"
+			top="0"
+			left="0"
+			width="100dvw"
+			height="100dvh"
+			justify="center"
+			overflowX="hidden"
+			overflowY="scroll"
+		>
+			<Box width="100%" height="100%" maxWidth="1136px">
 				<Flex
 					width="100%"
-					maxWidth="500px"
-					justify="center"
+					height={{ initial: "auto", xs: "100%" }}
+					justify={{ initial: "start", xs: "center" }}
 					align="center"
 					direction="column"
+					py="7rem"
 					gap="4"
 				>
-					{links.map((link, index) => (
-						<Flex
-							key={index}
-							width="100%"
-							height="3rem"
-							justify="center"
-							align="center"
-							className="tracking border-y border-solid border-1 border-[var(--text-color)] t-a-3-ease-out hover-invert"
-						>
-							<Link
-								href={link.href}
-								target="_blank"
-								className="text-base font-medium w-full text-center"
+					<Flex pt="5" maxWidth="500px" justify="center" align="center">
+						{icons.map((contactIcon, index) => (
+							<Box
+								key={index}
+								m="2"
+								p="2"
+								className="t-a-3-ease-out hover:scale-150"
 							>
-								{link.text}
-							</Link>
-						</Flex>
-					))}
+								<Link href={contactIcon.link} target="_blank">
+									<contactIcon.icon
+										size={30}
+										className="text-[var(--text-color)]"
+									/>
+								</Link>
+							</Box>
+						))}
+					</Flex>
+					<Flex
+						width="100%"
+						maxWidth="500px"
+						justify="center"
+						align="center"
+						direction="column"
+						gap="4"
+						px="7"
+					>
+						{links.map((link, index) => (
+							<Flex
+								key={index}
+								width="100%"
+								height="2.8rem"
+								justify="center"
+								align="center"
+								className="tracking border-y border-solid border-1 border-[var(--text-color)] t-a-3-ease-out hover-invert rounded-none hover:rounded-md"
+							>
+								<Link
+									href={link.href}
+									target="_blank"
+									className="text-base font-medium w-full text-center"
+								>
+									{link.text}
+								</Link>
+							</Flex>
+						))}
+					</Flex>
 				</Flex>
-			</Flex>
-		</Container>
+			</Box>
+		</Flex>
 	)
 }
 
