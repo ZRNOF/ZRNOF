@@ -15,10 +15,10 @@ const Footer = () => {
 					className="h-16"
 					gap="1"
 				>
-					<Text size="1" className="text-[var(--fg-color)]">
+					<Text className="text-[var(--fg-color)] text-[10px]">
 						Copyright © 2024 Zaron Chen.
 					</Text>
-					<Text size="1" className="text-[var(--fg-color)]">
+					<Text className="text-[var(--fg-color)] text-[10px]">
 						All rights reserved.
 					</Text>
 				</Flex>
