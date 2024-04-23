@@ -4,14 +4,20 @@ import { RxCross2 } from "react-icons/rx"
 
 interface NavbarProps {
 	links: { label: string; href: string }[]
+	onClick: () => void
 }
 
-export const Navbar = ({ links }: NavbarProps) => {
+export const Navbar = ({ links, onClick }: NavbarProps) => {
 	return (
 		<ul className="hidden sm:flex">
 			{links.map((link) => (
 				<li key={link.label} className="w-36 text-end">
-					<Link href={link.href} className="navbar-link" scroll={false}>
+					<Link
+						href={link.href}
+						className="navbar-link"
+						scroll={false}
+						onClick={onClick}
+					>
 						{link.label}
 					</Link>
 				</li>
@@ -20,12 +26,17 @@ export const Navbar = ({ links }: NavbarProps) => {
 	)
 }
 
-export const CollapsedNavbar = ({ links }: NavbarProps) => {
+export const CollapsedNavbar = ({ links, onClick }: NavbarProps) => {
 	return (
 		<ul className="absolute top-14 left-0 w-full sm:hidden flex flex-col justify-start h-dvh bg-gradient-to-b from-[var(--bg-color)] from-50% via-transparent">
 			{links.map((link) => (
 				<li key={link.label} className="py-8 text-center">
-					<Link href={link.href} className="navbar-link" scroll={false}>
+					<Link
+						href={link.href}
+						className="navbar-link"
+						scroll={false}
+						onClick={onClick}
+					>
 						{link.label}
 					</Link>
 				</li>

@@ -13,6 +13,7 @@ const links: { label: string; href: string }[] = [
 
 const Header = () => {
 	const [isExpand, setIsExpand] = useState(false)
+	const handleClick = () => setIsExpand(false)
 	return (
 		<Flex
 			position="fixed"
@@ -28,13 +29,13 @@ const Header = () => {
 							<Link href="/">ZRNOF</Link>
 						</Heading>
 					</Box>
-					<Navbar links={links} />
+					<Navbar links={links} onClick={handleClick} />
 					<NavbarToggle
 						isExpand={isExpand}
 						onClick={() => setIsExpand(!isExpand)}
 					/>
 				</Flex>
-				{isExpand && <CollapsedNavbar links={links} />}
+				{isExpand && <CollapsedNavbar links={links} onClick={handleClick} />}
 			</Container>
 		</Flex>
 	)
