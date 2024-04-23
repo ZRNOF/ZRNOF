@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import infos from "./infos"
 import P5Sketch from "../components/P5Sketch"
+import { StaticImport } from "next/dist/shared/lib/get-img-props"
 
 const WorksPage = () => {
 	return (
@@ -17,6 +18,7 @@ const WorksPage = () => {
 			justify="center"
 			overflowX="hidden"
 			overflowY="scroll"
+			style={{ scrollSnapType: "y proximity" }}
 		>
 			<Box width="100%" height="100%" maxWidth="1136px">
 				{infos.map((info, index) => {
@@ -29,7 +31,8 @@ const WorksPage = () => {
 							width="100%"
 							height="100%"
 							py="7rem"
-							px="4rem"
+							px="7"
+							style={{ scrollSnapAlign: "start" }}
 						>
 							<Box
 								gridColumnStart="1"
@@ -39,7 +42,10 @@ const WorksPage = () => {
 								pr={{ initial: "0", sm: "7" }}
 								className="z-10 bg-[#000000E7] md:bg-transparent text-white md:text-[var(--fg-color)] pointer-events-none"
 							>
-								<Heading as="h2" align="center">
+								<Heading
+									size={{ initial: "3", xs: "5", sm: "7" }}
+									align="center"
+								>
 									{info.title}
 								</Heading>
 								<hr className="my-2 hidden md:block" />
@@ -70,7 +76,7 @@ const WorksPage = () => {
 	)
 }
 
-const Preview = ({ src, index }: { src: string; index: number }) => {
+const Preview = ({ src, index }: { src: StaticImport; index: number }) => {
 	return (
 		<Image
 			src={src}
