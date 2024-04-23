@@ -23,9 +23,33 @@ body,
 main {
 	color: var(--fg-color);
 	background-color: var(--bg-color);
-	scrollbar-width: thin;
-	scrollbar-color: grey var(--bg-color);
 }
+
+/*******************************************************/
+/********************** scrollbar **********************/
+
+/* FireFox */
+@-moz-document url-prefix() {
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: grey var(--bg-color);
+	}
+}
+
+::-webkit-scrollbar {
+	width: 0.6rem;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+	background: grey;
+}
+
+/********************** scrollbar **********************/
+/*******************************************************/
 
 @layer utilities {
 	.content-wrap {
