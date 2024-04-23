@@ -20,32 +20,34 @@ const ContactPage = () => {
 	]
 
 	return (
-		<Flex
+		<Box
 			position="fixed"
 			top="0"
 			left="0"
 			width="100dvw"
-			height="100dvh"
-			justify="center"
-			overflowX="hidden"
+			height="100%"
 			overflowY="scroll"
 		>
-			<Box width="100%" height="100%" maxWidth="1136px">
+			<Flex
+				justify="center"
+				align="center"
+				minHeight="100%"
+				py="7rem"
+				className="box-border"
+			>
 				<Flex
 					width="100%"
-					height={{ initial: "auto", xs: "100%" }}
-					justify={{ initial: "start", xs: "center" }}
+					justify="center"
 					align="center"
 					direction="column"
-					py="7rem"
 					gap="3"
 				>
 					<Flex maxWidth="500px" justify="center" align="center">
 						{icons.map((contactIcon, index) => (
 							<Box
 								key={index}
-								m="2"
-								p="2"
+								m={{ initial: "6px", xs: "2" }}
+								p={{ initial: "6px", xs: "2" }}
 								className="t-a-3-ease-out hover:scale-125"
 							>
 								<Link href={contactIcon.link} target="_blank">
@@ -86,8 +88,8 @@ const ContactPage = () => {
 						))}
 					</Flex>
 				</Flex>
-			</Box>
-		</Flex>
+			</Flex>
+		</Box>
 	)
 }
 
