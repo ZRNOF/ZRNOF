@@ -13,12 +13,10 @@ const WorksPage = () => {
 			position="fixed"
 			top="0"
 			left="0"
-			width="100dvw"
-			height="100dvh"
 			justify="center"
 			overflowX="hidden"
 			overflowY="scroll"
-			style={{ scrollSnapType: "y proximity" }}
+			className="full"
 		>
 			<Box width="100%" height="100%" maxWidth="1136px">
 				{infos.map((info, index) => {
@@ -32,7 +30,6 @@ const WorksPage = () => {
 							height="100%"
 							py="7rem"
 							px="7"
-							style={{ scrollSnapAlign: "start" }}
 						>
 							<Box
 								gridColumnStart="1"

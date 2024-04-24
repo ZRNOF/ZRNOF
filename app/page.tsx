@@ -102,19 +102,17 @@ export default function Home() {
 	return (
 		<Flex
 			px={{ initial: "0", xs: "7" }}
-			width="100%"
-			height="100%"
 			justify="center"
 			align="center"
+			className="full"
 		>
 			<Main
-				width="100%"
 				maxWidth="1136px"
-				height="100%"
 				columns="20"
 				rows="1"
 				overflow="hidden"
 				align="center"
+				className="full"
 			>
 				<Box gridColumnStart="6" gridColumnEnd="21" gridRow="1" height="600px">
 					<Canvas

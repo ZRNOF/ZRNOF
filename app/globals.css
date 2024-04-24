@@ -56,6 +56,10 @@ main {
 		@apply py-16 h-dvh box-border;
 	}
 
+	.full {
+		@apply inset-0 w-full h-full;
+	}
+
 	.t-a-3-ease-out {
 		@apply transition-all duration-300 ease-out;
 	}

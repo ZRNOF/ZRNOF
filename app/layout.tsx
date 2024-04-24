@@ -28,9 +28,7 @@ export default function RootLayout({
 				<Theme>
 					<Header />
 					<main className="content-wrap">
-						<Flex width="100dvw" height="100%">
-							{children}
-						</Flex>
+						<Flex className="full">{children}</Flex>
 					</main>
 					<Footer />
 				</Theme>

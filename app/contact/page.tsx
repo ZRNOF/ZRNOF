@@ -20,14 +20,7 @@ const ContactPage = () => {
 	]
 
 	return (
-		<Box
-			position="fixed"
-			top="0"
-			left="0"
-			width="100dvw"
-			height="100%"
-			overflowY="scroll"
-		>
+		<Box position="fixed" top="0" left="0" overflowY="scroll" className="full">
 			<Flex
 				justify="center"
 				align="center"
