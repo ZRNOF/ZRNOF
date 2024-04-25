@@ -1,7 +1,18 @@
-import * as sketches from "./sketches"
+import { StaticImageData } from "next/image"
+import p5Types from "p5"
 import * as previews from "./previews"
+import * as sketches from "./sketches"
 
-const infos = [
+export interface Infos {
+	id: string
+	title: string
+	desc: string
+	href: string
+	preview: StaticImageData
+	sketch: (p: p5Types, parentId: string) => void
+}
+
+const infos: Infos[] = [
 	{
 		id: "UnifiedRupture",
 		title: "Unified Rupture",
