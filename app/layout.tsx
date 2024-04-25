@@ -2,7 +2,6 @@ import { Flex, Theme } from "@radix-ui/themes"
 import "@radix-ui/themes/styles.css"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
-import Footer from "./Footer"
 import "./globals.css"
 import Header from "./Header"
 
@@ -30,7 +29,6 @@ export default function RootLayout({
 					<main className="content-wrap">
 						<Flex className="full">{children}</Flex>
 					</main>
-					<Footer />
 				</Theme>
 			</body>
 		</html>
