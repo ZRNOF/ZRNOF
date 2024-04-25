@@ -22,7 +22,7 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang="en">
+		<html lang="en" className="full">
 			<link rel="icon" href="/favicon.svg" sizes="any" />
 			<body className={`${inter.className}`}>
 				<Theme>
