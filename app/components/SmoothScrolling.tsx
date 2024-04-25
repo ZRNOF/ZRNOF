@@ -1,14 +1,34 @@
 "use client"
 
-import { ReactLenis, useLenis } from "lenis/react"
-import { PropsWithChildren } from "react"
+import gsap from "gsap"
+import { ReactLenis } from "lenis/react"
+import { PropsWithChildren, useEffect } from "react"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 const SmoothScrolling = ({ children }: PropsWithChildren) => {
-	const lenis = useLenis(({ scroll }) => {
-		console.log("scroll", scroll)
-	})
+	useEffect(() => {
+		// from https://codepen.io/akapowl/pen/JjxVVMP by akapowl
+		gsap.registerPlugin(ScrollTrigger)
+		let direction = 0
+		const scroll = ScrollTrigger.create({
+			onUpdate: (self) => {
+				if (self.direction !== direction) {
+					direction = self.direction
+					gsap.to("#header", { autoAlpha: direction === 1 ? 0 : 1 })
+				}
+			},
+		})
 
-	return <ReactLenis root>{children}</ReactLenis>
+		return () => {
+			scroll.kill()
+		}
+	}, [])
+
+	return (
+		<ReactLenis root options={{ lerp: 0.05 }}>
+			{children}
+		</ReactLenis>
+	)
 }
 
 export default SmoothScrolling

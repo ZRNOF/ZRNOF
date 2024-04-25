@@ -16,6 +16,7 @@ const Header = () => {
 	const handleClick = () => setIsExpand(false)
 	return (
 		<Flex
+			id="header"
 			position="fixed"
 			width="100%"
 			height="7rem"
