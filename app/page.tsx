@@ -1,10 +1,11 @@
 "use client"
 
-import { Box, Flex, Grid, Heading, Text } from "@radix-ui/themes"
+import { Box, Flex, Grid, Heading } from "@radix-ui/themes"
+import styled, { keyframes } from "styled-components"
 import P5Sketch from "./components/P5Sketch"
 import Welcome from "./sketch"
 import "./theme-config.css"
-import styled, { keyframes } from "styled-components"
+import Container from "./components/Container"
 
 const Main = styled(Grid)`
 	@media screen and (max-width: 1023px) {
@@ -100,48 +101,55 @@ const intro2 = `
 
 export default function Home() {
 	return (
-		<Flex
-			px={{ initial: "0", xs: "7" }}
-			justify="center"
-			align="center"
-			className="full"
-		>
-			<Main
-				maxWidth="1136px"
-				columns="20"
-				rows="1"
-				overflow="hidden"
+		<Container>
+			<Flex
+				px={{ initial: "0", xs: "7" }}
+				justify="center"
 				align="center"
 				className="full"
 			>
-				<Box gridColumnStart="6" gridColumnEnd="21" gridRow="1" height="600px">
-					<Canvas
-						className="aspect-square h-full"
-						sketch={Welcome}
-						id="welcome"
-						p5flex
-					/>
-				</Box>
-				<Intro
-					gridColumnStart={{ initial: "1", md: "2" }}
-					gridColumnEnd={{ initial: "21", md: "11" }}
-					gridRow="1"
-					p="5"
-					className="z-10 text-justify bg-gradient-to-r from-[var(--bg-color)] from-50% via-transparent"
+				<Main
+					maxWidth="1136px"
+					columns="20"
+					rows="1"
+					overflow="hidden"
+					align="center"
+					className="full"
 				>
-					<Heading as="h2" mb="3">
-						Hello world!
-					</Heading>
-					<Grid
-						columns={{ initial: "1", sm: "2", md: "1" }}
-						gap={{ initial: "0", sm: "7", md: "0" }}
+					<Box
+						gridColumnStart="6"
+						gridColumnEnd="21"
+						gridRow="1"
+						height="600px"
 					>
-						<Box mb="3">{intro1}</Box>
-						<Box mb="3">{intro2}</Box>
-					</Grid>
-					<hr />
-				</Intro>
-			</Main>
-		</Flex>
+						<Canvas
+							className="aspect-square h-full"
+							sketch={Welcome}
+							id="welcome"
+							p5flex
+						/>
+					</Box>
+					<Intro
+						gridColumnStart={{ initial: "1", md: "2" }}
+						gridColumnEnd={{ initial: "21", md: "11" }}
+						gridRow="1"
+						p="5"
+						className="z-10 text-justify bg-gradient-to-r from-[var(--bg-color)] from-50% via-transparent"
+					>
+						<Heading as="h2" mb="3">
+							Hello world!
+						</Heading>
+						<Grid
+							columns={{ initial: "1", sm: "2", md: "1" }}
+							gap={{ initial: "0", sm: "7", md: "0" }}
+						>
+							<Box mb="3">{intro1}</Box>
+							<Box mb="3">{intro2}</Box>
+						</Grid>
+						<hr />
+					</Intro>
+				</Main>
+			</Flex>
+		</Container>
 	)
 }

@@ -3,7 +3,7 @@ import Link from "next/link"
 import { IconType } from "react-icons"
 import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
-import SmoothScrolling from "../components/SmoothScrolling"
+import Container from "../components/Container"
 
 const ContactPage = () => {
 	const icons = [
@@ -22,23 +22,21 @@ const ContactPage = () => {
 	]
 
 	return (
-		<SmoothScrolling>
-			<Box position="absolute" top="0" left="0" className="full">
-				<Flex
-					justify="center"
-					align="center"
-					minHeight="100%"
-					py="7rem"
-					width="100%"
-					className="box-border"
-					direction="column"
-					gap="3"
-				>
-					<IconList icons={icons} />
-					<LinkList links={links} />
-				</Flex>
-			</Box>
-		</SmoothScrolling>
+		<Container>
+			<Flex
+				justify="center"
+				align="center"
+				minHeight="100%"
+				py="7rem"
+				width="100%"
+				className="box-border"
+				direction="column"
+				gap="3"
+			>
+				<IconList icons={icons} />
+				<LinkList links={links} />
+			</Flex>
+		</Container>
 	)
 }
 
