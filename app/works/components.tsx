@@ -8,7 +8,7 @@ import P5Sketch from "../components/P5Sketch"
 import { Infos } from "./infos"
 
 export const Section = ({ children }: PropsWithChildren) => (
-	<Flex position="sticky" justify="center" align="center" height="100dvh">
+	<Flex position="sticky" justify="center" align="center" height="100%">
 		<Flex
 			position="absolute"
 			top="0"

@@ -6,7 +6,7 @@ const Container = ({ children }: PropsWithChildren) => {
 	return (
 		<SmoothScrolling>
 			<Box position="absolute" top="0" left="0" className="full">
-				<Flex justify="center" className="full">
+				<Flex justify="center" className="full bg-[var(--bg-color)]">
 					<Box maxWidth="1136px" className="full">
 						{children}
 					</Box>

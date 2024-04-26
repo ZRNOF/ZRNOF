@@ -14,12 +14,12 @@
 	}
 }
 
-body {
-	user-select: none;
-}
-
+html,
 body,
 main {
+	width: 100%;
+	height: 100%;
+	height: -webkit-fill-available;
 	color: var(--fg-color);
 	background-color: var(--bg-color);
 }
@@ -52,7 +52,7 @@ main {
 
 @layer utilities {
 	.content-wrap {
-		@apply py-16 h-dvh box-border;
+		@apply py-16;
 	}
 
 	.full {
