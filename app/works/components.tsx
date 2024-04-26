@@ -6,6 +6,7 @@ import Link from "next/link"
 import { PropsWithChildren } from "react"
 import P5Sketch from "../components/P5Sketch"
 import { Infos } from "./infos"
+import { useMediaQuery } from "react-responsive"
 
 export const Section = ({ children }: PropsWithChildren) => (
 	<Flex position="sticky" justify="center" align="center" height="100%">
@@ -44,6 +45,7 @@ export const Description = ({ info }: { info: Infos }) => {
 }
 
 export const Display = ({ index, info }: { index: number; info: Infos }) => {
+	const isSmallScreen = useMediaQuery({ maxWidth: 640 })
 	return (
 		<Box
 			gridColumnStart={{ initial: "1", sm: "6" }}
@@ -58,10 +60,13 @@ export const Display = ({ index, info }: { index: number; info: Infos }) => {
 				alt=""
 				width={512}
 				height={512}
+				placeholder="blur"
 				priority={index === 0}
-				className="absolute full object-cover transition-opacity duration-500 hover:opacity-0"
+				className="absolute full object-cover sm:transition-opacity sm:duration-500 sm:hover:opacity-0"
 			/>
-			<P5Sketch className="full" sketch={info.sketch} id={info.id} p5flex />
+			{!isSmallScreen && (
+				<P5Sketch className="full" sketch={info.sketch} id={info.id} p5flex />
+			)}
 			<Link
 				className="text-xs px-2 py-1 bg-black text-white source-button bottom-0 right-0 absolute"
 				href={info.href}

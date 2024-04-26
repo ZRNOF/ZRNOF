@@ -21,14 +21,14 @@ const infos: Infos[] = [
 		preview: previews.UnifiedRupture,
 		sketch: sketches.UnifiedRupture,
 	},
-	{
-		id: "Travel",
-		title: "Travel",
-		desc: "Travel is essentially a photo slideshow that utilizes noise to create domain warping effects, resulting in a marble-like, flowing appearance.",
-		href: "https://openprocessing.org/sketch/1826376",
-		preview: previews.Travel,
-		sketch: sketches.Travel,
-	},
+	// {
+	// 	id: "Travel",
+	// 	title: "Travel",
+	// 	desc: "Travel is essentially a photo slideshow that utilizes noise to create domain warping effects, resulting in a marble-like, flowing appearance.",
+	// 	href: "https://openprocessing.org/sketch/1826376",
+	// 	preview: previews.Travel,
+	// 	sketch: sketches.Travel,
+	// },
 	{
 		id: "DraculaAndTheUndead",
 		title: "Dracula and the Undead",
