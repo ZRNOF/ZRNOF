@@ -21,10 +21,10 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang="en" className="full">
+		<html lang="en">
 			<link rel="icon" href="/favicon.svg" sizes="any" />
 			<body className={`${inter.className}`}>
-				<Theme>
+				<Theme className="!min-h-full">
 					<Header />
 					<main className="content-wrap">
 						<Flex className="full">{children}</Flex>
