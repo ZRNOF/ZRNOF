@@ -1,8 +1,8 @@
 "use client"
 
-import { Box, Flex, Grid, Heading } from "@radix-ui/themes"
+import { Box, Grid, Heading } from "@radix-ui/themes"
 import styled, { keyframes } from "styled-components"
-import { Container, P5Sketch } from "./components"
+import { Center, Container, P5Sketch } from "./components"
 import "./theme-config.css"
 import Welcome from "./Welcome"
 
@@ -101,12 +101,7 @@ const intro2 = `
 export default function Home() {
 	return (
 		<Container>
-			<Flex
-				px={{ initial: "0", xs: "7" }}
-				justify="center"
-				align="center"
-				className="full"
-			>
+			<Center px={{ initial: "0", xs: "7" }} className="full">
 				<Main
 					maxWidth="1136px"
 					columns="20"
@@ -148,7 +143,7 @@ export default function Home() {
 						<hr />
 					</Intro>
 				</Main>
-			</Flex>
+			</Center>
 		</Container>
 	)
 }

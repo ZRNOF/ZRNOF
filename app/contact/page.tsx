@@ -1,9 +1,9 @@
-import { Box, Flex } from "@radix-ui/themes"
+import { Box } from "@radix-ui/themes"
 import Link from "next/link"
 import { IconType } from "react-icons"
 import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
-import { Container } from "../components"
+import { Center, Container } from "../components"
 
 const ContactPage = () => {
 	const icons = [
@@ -23,9 +23,7 @@ const ContactPage = () => {
 
 	return (
 		<Container>
-			<Flex
-				justify="center"
-				align="center"
+			<Center
 				minHeight="100%"
 				py="7rem"
 				width="100%"
@@ -35,14 +33,14 @@ const ContactPage = () => {
 			>
 				<IconList icons={icons} />
 				<LinkList links={links} />
-			</Flex>
+			</Center>
 		</Container>
 	)
 }
 
 const IconList = ({ icons }: { icons: { icon: IconType; link: string }[] }) => {
 	return (
-		<Flex maxWidth="500px" justify="center" align="center">
+		<Center maxWidth="500px">
 			{icons.map((contactIcon, index) => (
 				<Box
 					key={index}
@@ -55,28 +53,18 @@ const IconList = ({ icons }: { icons: { icon: IconType; link: string }[] }) => {
 					</Link>
 				</Box>
 			))}
-		</Flex>
+		</Center>
 	)
 }
 
 const LinkList = ({ links }: { links: { text: string; href: string }[] }) => {
 	return (
-		<Flex
-			width="100%"
-			maxWidth="500px"
-			justify="center"
-			align="center"
-			direction="column"
-			gap="4"
-			px="7"
-		>
+		<Center width="100%" maxWidth="500px" direction="column" gap="4" px="7">
 			{links.map((link, index) => (
-				<Flex
+				<Center
 					key={index}
 					width="100%"
 					height="2.8rem"
-					justify="center"
-					align="center"
 					className="tracking border-y border-solid border-1 border-[var(--text-color)] t-a-3-ease-out hover-invert rounded-none hover:rounded-md"
 				>
 					<Link
@@ -86,9 +74,9 @@ const LinkList = ({ links }: { links: { text: string; href: string }[] }) => {
 					>
 						{link.text}
 					</Link>
-				</Flex>
+				</Center>
 			))}
-		</Flex>
+		</Center>
 	)
 }
 

@@ -1,28 +1,26 @@
 "use client"
 
-import { Box, Flex, Heading, Text } from "@radix-ui/themes"
+import { Box, Heading, Text } from "@radix-ui/themes"
 import Image from "next/image"
 import Link from "next/link"
 import { PropsWithChildren } from "react"
 import { useMediaQuery } from "react-responsive"
-import { P5Sketch } from "../components"
+import { Center, P5Sketch } from "../components"
 import { Infos } from "./infos"
 
 export const Section = ({ children }: PropsWithChildren) => (
-	<Flex position="sticky" justify="center" align="center" height="100%">
-		<Flex
+	<Center position="sticky" height="100%">
+		<Center
 			position="absolute"
 			top="0"
 			left="0"
-			justify="center"
-			align="center"
 			minHeight="100%"
 			py="7rem"
 			className="full"
 		>
 			{children}
-		</Flex>
-	</Flex>
+		</Center>
+	</Center>
 )
 
 export const Description = ({ info }: { info: Infos }) => {
