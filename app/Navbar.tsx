@@ -1,53 +1,55 @@
 import Link from "next/link"
+import { useEffect, useState } from "react"
 import { MdOutlineMenu } from "react-icons/md"
 import { RxCross2 } from "react-icons/rx"
+import { useMediaQuery } from "react-responsive"
 
-interface NavbarProps {
-	links: { label: string; href: string }[]
-	onClick: () => void
-}
+const links: { label: string; href: string }[] = [
+	{ label: "About", href: "/" },
+	{ label: "Works", href: "/works" },
+	{ label: "Contact", href: "/contact" },
+]
 
-export const Navbar = ({ links, onClick }: NavbarProps) => {
-	return (
-		<ul className="hidden sm:flex">
-			{links.map((link) => (
-				<li key={link.label} className="w-36 text-end">
-					<Link href={link.href} className="navbar-link" onClick={onClick}>
-						{link.label}
-					</Link>
-				</li>
-			))}
-		</ul>
-	)
-}
+export const Navbar = () => {
+	const [isExpand, setIsExpand] = useState(false)
+	const [isHorizontal, setIsHorizontal] = useState(true)
+	const isSmallScreen = useMediaQuery({ maxWidth: 640 })
+	useEffect(() => setIsHorizontal(!isSmallScreen), [isSmallScreen])
 
-export const CollapsedNavbar = ({ links, onClick }: NavbarProps) => {
-	return (
-		<ul className="absolute top-14 left-0 w-full sm:hidden flex flex-col justify-start h-dvh bg-gradient-to-b from-[var(--bg-color)] from-50% via-transparent">
-			{links.map((link) => (
-				<li key={link.label} className="py-8 text-center">
-					<Link href={link.href} className="navbar-link" onClick={onClick}>
-						{link.label}
-					</Link>
-				</li>
-			))}
-		</ul>
-	)
-}
-
-export const NavbarToggle = ({
-	isExpand,
-	onClick,
-}: {
-	isExpand: boolean
-	onClick: () => void
-}) => {
 	const Icon = isExpand ? RxCross2 : MdOutlineMenu
+
+	const HorUl = "hidden sm:flex"
+	const VerUl = `
+		absolute top-14 left-0
+		w-full h-dvh
+		flex flex-col justify-start
+		sm:hidden bg-[var(--bg-color)]
+		transition-all ease-in-out duration-500
+		${isExpand ? "opacity-100 visible" : "opacity-0 invisible"}
+	`
+	const HorLi = "w-36 text-end"
+	const VerLi = "py-8 text-center"
+
 	return (
-		<Icon
-			size={30}
-			className="text-[var(--fg-color)] sm:hidden"
-			onClick={onClick}
-		/>
+		<>
+			<ul className={isHorizontal ? HorUl : VerUl}>
+				{links.map((link) => (
+					<li key={link.label} className={isHorizontal ? HorLi : VerLi}>
+						<Link
+							href={link.href}
+							className="navbar-link"
+							onClick={() => setIsExpand(false)}
+						>
+							{link.label}
+						</Link>
+					</li>
+				))}
+			</ul>
+			<Icon
+				size={30}
+				className="text-[var(--fg-color)] sm:hidden"
+				onClick={() => setIsExpand(!isExpand)}
+			/>
+		</>
 	)
 }
