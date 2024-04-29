@@ -56,8 +56,8 @@ export const Display = ({ index, info }: { index: number; info: Infos }) => {
 			<Image
 				src={info.preview}
 				alt=""
-				width={512}
-				height={512}
+				width={0}
+				height={0}
 				placeholder="blur"
 				priority={index === 0}
 				className="absolute full object-cover sm:transition-opacity sm:duration-500 sm:hover:opacity-0"
