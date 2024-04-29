@@ -3,7 +3,7 @@
 import { Box, Heading, Text } from "@radix-ui/themes"
 import Image from "next/image"
 import Link from "next/link"
-import { PropsWithChildren } from "react"
+import { PropsWithChildren, useEffect, useState } from "react"
 import { useMediaQuery } from "react-responsive"
 import { Center, P5Sketch } from "../components"
 import { Infos } from "./infos"
@@ -44,6 +44,9 @@ export const Description = ({ info }: { info: Infos }) => {
 
 export const Display = ({ index, info }: { index: number; info: Infos }) => {
 	const isSmallScreen = useMediaQuery({ maxWidth: 640 })
+	const [enableP5Sketch, setEnableP5Sketch] = useState(true)
+	useEffect(() => setEnableP5Sketch(!isSmallScreen), [isSmallScreen])
+
 	return (
 		<Box
 			gridColumnStart={{ initial: "1", sm: "6" }}
@@ -62,7 +65,7 @@ export const Display = ({ index, info }: { index: number; info: Infos }) => {
 				priority={index === 0}
 				className="absolute full object-cover sm:transition-opacity sm:duration-500 sm:hover:opacity-0"
 			/>
-			{!isSmallScreen && (
+			{enableP5Sketch && (
 				<P5Sketch className="full" sketch={info.sketch} id={info.id} p5flex />
 			)}
 			<Link
