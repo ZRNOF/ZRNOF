@@ -1,7 +1,7 @@
 // Naraka © 2023-04-30 by Zaron Chen is licensed under CC BY-NC-SA 3.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/
 
 import p5Types, { Graphics } from "p5"
-import { VERT, FRAG } from "./shader"
+import { FRAG, VERT } from "./shader"
 
 const Naraka = (p: p5Types, parentId: string) => {
 	const parent = document.getElementById(parentId) as HTMLDivElement

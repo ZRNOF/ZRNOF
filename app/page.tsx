@@ -2,10 +2,9 @@
 
 import { Box, Flex, Grid, Heading } from "@radix-ui/themes"
 import styled, { keyframes } from "styled-components"
-import P5Sketch from "./components/P5Sketch"
-import Welcome from "./sketch"
+import { Container, P5Sketch } from "./components"
 import "./theme-config.css"
-import Container from "./components/Container"
+import Welcome from "./Welcome"
 
 const Main = styled(Grid)`
 	@media screen and (max-width: 1023px) {

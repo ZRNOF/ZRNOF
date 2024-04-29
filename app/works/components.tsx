@@ -4,9 +4,9 @@ import { Box, Flex, Heading, Text } from "@radix-ui/themes"
 import Image from "next/image"
 import Link from "next/link"
 import { PropsWithChildren } from "react"
-import P5Sketch from "../components/P5Sketch"
-import { Infos } from "./infos"
 import { useMediaQuery } from "react-responsive"
+import { P5Sketch } from "../components"
+import { Infos } from "./infos"
 
 export const Section = ({ children }: PropsWithChildren) => (
 	<Flex position="sticky" justify="center" align="center" height="100%">

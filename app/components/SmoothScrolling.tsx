@@ -1,9 +1,9 @@
 "use client"
 
 import gsap from "gsap"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { ReactLenis } from "lenis/react"
 import { PropsWithChildren, useEffect } from "react"
-import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 const SmoothScrolling = ({ children }: PropsWithChildren) => {
 	useEffect(() => {

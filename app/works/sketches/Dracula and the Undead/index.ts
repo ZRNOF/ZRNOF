@@ -1,7 +1,7 @@
 // Dracula and the Undead © 2023-04-07 by Zaron Chen is licensed under CC BY-NC-SA 3.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/
 
 import p5Types from "p5"
-import { VERT, FRAG, FILTER_FRAG } from "./shader"
+import { FILTER_FRAG, FRAG, VERT } from "./shader"
 
 const DraculaAndTheUndead = (p: p5Types, parentId: string) => {
 	const parent = document.getElementById(parentId) as HTMLDivElement

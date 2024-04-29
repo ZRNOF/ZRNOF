@@ -1,8 +1,8 @@
 "use client"
 
-import { useEffect, useRef, useState } from "react"
 import p5Types from "p5"
 import { mountFlex } from "p5.flex"
+import { useEffect, useRef, useState } from "react"
 
 interface P5SketchProps {
 	sketch: (p: p5Types, parentId: string) => void

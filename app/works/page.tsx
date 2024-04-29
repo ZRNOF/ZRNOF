@@ -1,9 +1,9 @@
 "use client"
 
 import { Grid } from "@radix-ui/themes"
-import infos from "./infos"
-import Container from "../components/Container"
+import { Container } from "../components"
 import { Description, Display, Section } from "./components"
+import infos from "./infos"
 
 const WorksPage = () => {
 	return (

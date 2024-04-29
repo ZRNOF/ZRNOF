@@ -3,7 +3,7 @@ import Link from "next/link"
 import { IconType } from "react-icons"
 import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
-import Container from "../components/Container"
+import { Container } from "../components"
 
 const ContactPage = () => {
 	const icons = [

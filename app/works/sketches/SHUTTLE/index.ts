@@ -1,7 +1,7 @@
 //  SHUTTLE ! © 2023-02-08 by Zaron Chen is licensed under CC BY-NC-SA 3.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-sa/3.0/
 
 import p5Types from "p5"
-import { vert, frag } from "./shader"
+import { frag, vert } from "./shader"
 
 const SHUTTLE = (p: p5Types, parentId: string) => {
 	const parent = document.getElementById(parentId) as HTMLDivElement
