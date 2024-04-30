@@ -5,29 +5,24 @@ import { Container } from "../components"
 import { Description, Display, Section } from "./components"
 import infos from "./infos"
 
-const WorksPage = () => {
-	return (
-		<>
-			<Container>
-				{infos.map((info, index) => (
-					<Section key={info.id}>
-						<Grid
-							columns="repeat(10, 1fr)"
-							rows="repeat(1, 1fr)"
-							align="center"
-							width="100%"
-							height="100dvh"
-							py="7rem"
-							px="7"
-						>
-							<Description info={info} />
-							<Display index={index} info={info} />
-						</Grid>
-					</Section>
-				))}
-			</Container>
-		</>
-	)
-}
+const WorksPage = () => (
+	<Container>
+		{infos.map((info, index) => (
+			<Section key={info.id}>
+				<Grid
+					columns="10"
+					rows="1"
+					align="center"
+					px="7"
+					py="7rem"
+					className="full"
+				>
+					<Description info={info} />
+					<Display index={index} info={info} />
+				</Grid>
+			</Section>
+		))}
+	</Container>
+)
 
 export default WorksPage

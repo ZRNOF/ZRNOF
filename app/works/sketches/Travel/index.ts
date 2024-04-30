@@ -55,21 +55,10 @@ const Travel = (p: p5Types, parentId: string) => {
 		p.image(Buffer, 0, 0)
 	}
 
-	const Border = (color: string, weight: number) => {
-		p.push()
-		p.noFill()
-		p.stroke(color)
-		p.strokeWeight(weight * 2)
-		p.rectMode(p.CENTER)
-		p.rect(0, 0, p.width, p.height)
-		p.pop()
-	}
-
-	p.mouseMoved = () => {
+	p.mouseMoved = () =>
 		p.mouseX > 0 && p.mouseX < p.width && p.mouseY > 0 && p.mouseY < p.height
 			? p.loop()
 			: p.noLoop()
-	}
 }
 
 export default Travel

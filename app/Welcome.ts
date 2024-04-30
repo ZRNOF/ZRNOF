@@ -20,16 +20,14 @@ const Welcome = (p: p5Types, parentId: string) => {
 	let isShowCircle = false
 	const parent = document.getElementById(parentId) as HTMLDivElement
 
-	const getTheme = () => {
-		return {
-			fgColor: getComputedStyle(document.documentElement).getPropertyValue(
-				"--fg-color"
-			),
-			bgColor: getComputedStyle(document.documentElement).getPropertyValue(
-				"--bg-color"
-			),
-		}
-	}
+	const getTheme = () => ({
+		fgColor: getComputedStyle(document.documentElement).getPropertyValue(
+			"--fg-color"
+		),
+		bgColor: getComputedStyle(document.documentElement).getPropertyValue(
+			"--bg-color"
+		),
+	})
 
 	p.setup = () => {
 		p.createCanvas(600, 600)

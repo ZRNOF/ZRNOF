@@ -23,24 +23,22 @@ export const Section = ({ children }: PropsWithChildren) => (
 	</Center>
 )
 
-export const Description = ({ info }: { info: Infos }) => {
-	return (
-		<Box
-			gridColumnStart="1"
-			gridColumnEnd={{ initial: "11", sm: "6" }}
-			gridRow="1"
-			p="2"
-			pr={{ initial: "0", sm: "7" }}
-			className="z-10 bg-[#000000E7] md:bg-transparent text-white md:text-[var(--fg-color)] pointer-events-none"
-		>
-			<Heading size={{ initial: "3", xs: "5", sm: "7" }} align="center">
-				{info.title}
-			</Heading>
-			<hr className="my-2 hidden md:block" />
-			<Text className="hidden md:inline">{info.desc}</Text>
-		</Box>
-	)
-}
+export const Description = ({ info }: { info: Infos }) => (
+	<Box
+		gridColumnStart="1"
+		gridColumnEnd={{ initial: "11", sm: "6" }}
+		gridRow="1"
+		p="2"
+		pr={{ initial: "0", sm: "7" }}
+		className="z-10 bg-[#000000E7] md:bg-transparent text-white md:text-[var(--fg-color)] pointer-events-none"
+	>
+		<Heading size={{ initial: "3", xs: "5", sm: "7" }} align="center">
+			{info.title}
+		</Heading>
+		<hr className="my-2 hidden md:block" />
+		<Text className="hidden md:inline">{info.desc}</Text>
+	</Box>
+)
 
 export const Display = ({ index, info }: { index: number; info: Infos }) => {
 	const isSmallScreen = useMediaQuery({ maxWidth: 640 })

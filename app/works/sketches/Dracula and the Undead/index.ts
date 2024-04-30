@@ -55,11 +55,10 @@ const DraculaAndTheUndead = (p: p5Types, parentId: string) => {
 
 		p.image(res, 0, 0)
 	}
-	p.mouseMoved = () => {
+	p.mouseMoved = () =>
 		p.mouseX > 0 && p.mouseX < p.width && p.mouseY > 0 && p.mouseY < p.height
 			? p.loop()
 			: p.noLoop()
-	}
 }
 
 export default DraculaAndTheUndead
