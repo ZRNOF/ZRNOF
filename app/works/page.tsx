@@ -9,14 +9,7 @@ const WorksPage = () => (
 	<Container>
 		{infos.map((info, index) => (
 			<Section key={info.id}>
-				<Grid
-					columns="10"
-					rows="1"
-					align="center"
-					px="7"
-					py="7rem"
-					className="full"
-				>
+				<Grid columns="10" rows="1" align="center" px="7" className="full">
 					<Description info={info} />
 					<Display index={index} info={info} />
 				</Grid>
