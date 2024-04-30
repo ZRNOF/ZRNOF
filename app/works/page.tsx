@@ -1,20 +1,29 @@
-"use client"
-
-import { Grid } from "@radix-ui/themes"
+import type { Metadata } from "next"
 import { Container } from "../components"
-import { Description, Display, Section } from "./components"
-import infos from "./infos"
+import Works from "./Works"
+
+export const metadata: Metadata = {
+	title: "Zaron Chen | ZRNOF - Works",
+	description: "Welcome to Zaron Chen's creative coding world!",
+	icons: {
+		icon: ["/favicon.svg"],
+	},
+	openGraph: {
+		title: "Zaron Chen | ZRNOF - Works",
+		description: "Welcome to Zaron Chen's creative coding world!",
+		url: "https://zaron.art/",
+		siteName: "ZRNOF",
+		images: [
+			{
+				url: "https://zaron.art/UnifiedRupture.png",
+			},
+		],
+	},
+}
 
 const WorksPage = () => (
 	<Container>
-		{infos.map((info, index) => (
-			<Section key={info.id}>
-				<Grid columns="10" rows="1" align="center" px="7" className="full">
-					<Description info={info} />
-					<Display index={index} info={info} />
-				</Grid>
-			</Section>
-		))}
+		<Works />
 	</Container>
 )
 

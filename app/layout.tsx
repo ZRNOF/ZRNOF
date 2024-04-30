@@ -8,10 +8,21 @@ import Header from "./Header"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-	title: "ZRNOF",
-	description: "ZRNOF",
+	title: "Zaron Chen | ZRNOF",
+	description: "Welcome to Zaron Chen's creative coding world!",
 	icons: {
 		icon: ["/favicon.svg"],
+	},
+	openGraph: {
+		title: "Zaron Chen | ZRNOF",
+		description: "Welcome to Zaron Chen's creative coding world!",
+		url: "https://zaron.art/",
+		siteName: "ZRNOF",
+		images: [
+			{
+				url: "https://zaron.art/UnifiedRupture.png",
+			},
+		],
 	},
 }
 

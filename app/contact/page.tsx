@@ -1,9 +1,29 @@
 import { Box } from "@radix-ui/themes"
+import type { Metadata } from "next"
 import Link from "next/link"
 import { IconType } from "react-icons"
 import { FaFacebook, FaGithub, FaInstagram } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
 import { Center, Container } from "../components"
+
+export const metadata: Metadata = {
+	title: "Zaron Chen | ZRNOF - Contact",
+	description: "Welcome to Zaron Chen's creative coding world!",
+	icons: {
+		icon: ["/favicon.svg"],
+	},
+	openGraph: {
+		title: "Zaron Chen | ZRNOF - Contact",
+		description: "Welcome to Zaron Chen's creative coding world!",
+		url: "https://zaron.art/",
+		siteName: "ZRNOF",
+		images: [
+			{
+				url: "https://zaron.art/UnifiedRupture.png",
+			},
+		],
+	},
+}
 
 const icons = [
 	{ icon: FaFacebook, link: "https://www.facebook.com/zaronof" },

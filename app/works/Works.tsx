@@ -1,14 +1,27 @@
 "use client"
 
-import { Box, Heading, Text } from "@radix-ui/themes"
+import { Box, Grid, Heading, Text } from "@radix-ui/themes"
 import Image from "next/image"
 import Link from "next/link"
 import { PropsWithChildren, useEffect, useState } from "react"
 import { useMediaQuery } from "react-responsive"
 import { Center, P5Sketch } from "../components"
-import { Infos } from "./infos"
+import infos, { Infos } from "./infos"
 
-export const Section = ({ children }: PropsWithChildren) => (
+const Works = () => (
+	<>
+		{infos.map((info, index) => (
+			<Section key={info.id}>
+				<Grid columns="10" rows="1" align="center" px="7" className="full">
+					<Description info={info} />
+					<Display index={index} info={info} />
+				</Grid>
+			</Section>
+		))}
+	</>
+)
+
+const Section = ({ children }: PropsWithChildren) => (
 	<Center position="sticky" height="100%">
 		<Center
 			position="absolute"
@@ -23,7 +36,7 @@ export const Section = ({ children }: PropsWithChildren) => (
 	</Center>
 )
 
-export const Description = ({ info }: { info: Infos }) => (
+const Description = ({ info }: { info: Infos }) => (
 	<Box
 		gridColumnStart="1"
 		gridColumnEnd={{ initial: "11", sm: "6" }}
@@ -40,7 +53,7 @@ export const Description = ({ info }: { info: Infos }) => (
 	</Box>
 )
 
-export const Display = ({ index, info }: { index: number; info: Infos }) => {
+const Display = ({ index, info }: { index: number; info: Infos }) => {
 	const isSmallScreen = useMediaQuery({ maxWidth: 640 })
 	const [enableP5Sketch, setEnableP5Sketch] = useState(true)
 	useEffect(() => setEnableP5Sketch(!isSmallScreen), [isSmallScreen])
@@ -76,3 +89,5 @@ export const Display = ({ index, info }: { index: number; info: Infos }) => {
 		</Box>
 	)
 }
+
+export default Works
