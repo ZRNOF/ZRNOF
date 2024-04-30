@@ -5,8 +5,8 @@ import { FRAG, VERT } from "./shader"
 
 const Naraka = (p: p5Types, parentId: string) => {
 	const parent = document.getElementById(parentId) as HTMLDivElement
-	const [WIDTH, HEIGHT] = [600, 600]
-	const PIXEL_DENSITY = 2
+	const [WIDTH, HEIGHT] = [512, 512]
+	const PIXEL_DENSITY = 1
 	const CANVAS_SIZE = [WIDTH, HEIGHT]
 	let Canvas: p5Types.Renderer, gfx: Graphics, theShader: p5Types.Shader
 

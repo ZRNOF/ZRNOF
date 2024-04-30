@@ -5,8 +5,8 @@ import { FILTER_FRAG, FRAG, VERT } from "./shader"
 
 const DraculaAndTheUndead = (p: p5Types, parentId: string) => {
 	const parent = document.getElementById(parentId) as HTMLDivElement
-	const [WIDTH, HEIGHT] = [1024, 576]
-	const PIXEL_DENSITY = 1
+	const [WIDTH, HEIGHT] = [512, 512]
+	const PIXEL_DENSITY = 0.5
 	const CANVAS_SIZE = [WIDTH, HEIGHT]
 	let gfx: p5Types.Graphics,
 		res: p5Types.Graphics,
