@@ -19,7 +19,9 @@ export const metadata: Metadata = {
 		siteName: "ZRNOF",
 		images: [
 			{
-				url: "https://zaron.art/UnifiedRupture.png",
+				url: "https://zaron.art/banner.png",
+				width: 1200,
+				height: 630,
 			},
 		],
 	},
