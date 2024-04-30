@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Zaron Chen
 
-## Getting Started
+## Creative Coder | Generative Artist | Front-end Developer
 
-First, run the development server:
+Hi there! I'm Zaron Chen, based in Taiwan, a stunning island embraced by the sea. I have been delving into the Creative Coding since 2022.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Recently, I have been working on developing tools and contributing to the Creative Coding community. I also have some experience in both front-end and back-end development.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Skills
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- p5.js 🎨
+- React ⚛️
+- Next.js 🔄
+- HTML 📄
+- CSS 🖌️
+- JavaScript 💛
+- Python 🐍
+- WebGL 🌐
+- GLSL 🔮
+- TouchDesigner 🖐️
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Works
 
-## Learn More
+You can visit my personal site, at [zaron.art](https://zaron.art/), where I showcase some of my code art! You can also explore more of my creative coding works on my [OpenProcessing page](https://openprocessing.org/user/324002).
 
-To learn more about Next.js, take a look at the following resources:
+Below are some pieces of my code art that I've pinned here. Clicking on them will take you to OpenProcessing, where you can interact with some of them!
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<a href="https://openprocessing.org/sketch/1892095">
+  <img src="https://raw.githubusercontent.com/ZRNOF/WCCC-Sketches/main/2023/0409/preview/1.png" width="600">
+</a>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+&NewLine;
 
-## Deploy on Vercel
+<a href="https://openprocessing.org/sketch/2174234">
+  <img src="https://raw.githubusercontent.com/ZRNOF/WCCC-Sketches/main/2024/0211/preview/1.png" width="600">
+</a>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+&NewLine;
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<a href="https://openprocessing.org/sketch/2186619">
+  <img src="https://raw.githubusercontent.com/ZRNOF/WCCC-Sketches/main/2024/0223/preview/2.png" width="600">
+</a>
+
+&NewLine;
+
+<a href="https://openprocessing.org/sketch/2194429">
+  <img src="https://raw.githubusercontent.com/ZRNOF/WCCC-Sketches/main/2024/0301/preview/1.png" width="600">
+</a>
+
+&NewLine;
+
+<a href="https://openprocessing.org/sketch/2219276">
+  <img src="https://raw.githubusercontent.com/ZRNOF/WCCC-Sketches/main/2024/0325/preview/9.png" width="600">
+</a>
+
+## Contact
+
+You can find all links to me [here](https://zaron.art/contact)
+
+Thank you for taking the time to get to know me! ✨
