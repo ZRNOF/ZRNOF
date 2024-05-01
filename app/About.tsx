@@ -1,16 +1,26 @@
 "use client"
 
 import { Box, Grid, GridProps, Heading } from "@radix-ui/themes"
+import { useEffect, useState } from "react"
 import styled, { keyframes } from "styled-components"
 import { Center, P5Sketch } from "./components"
 import Welcome from "./Welcome"
 
-const About = () => (
-	<Center px={{ initial: "0", xs: "7" }} className="full">
-		<IntroSection />
-		<CanvasSection />
-	</Center>
-)
+const About = () => {
+	const [unlock, setUnlock] = useState(false)
+	useEffect(() => {
+		const timeout = setTimeout(() => setUnlock(true), 500)
+		return () => clearTimeout(timeout)
+	}, [unlock])
+
+	if (!unlock) return null
+	return (
+		<Center px={{ initial: "0", xs: "7" }} className="full">
+			<IntroSection />
+			<CanvasSection />
+		</Center>
+	)
+}
 
 const Section = ({ children, ...rest }: GridProps) => (
 	<Grid
